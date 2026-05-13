@@ -1,0 +1,34 @@
+<h1>MarioDex</h1>
+<h2>Enciclopedia coleccionable del universo Mario Bros.</h2>
+
+<!-- Modal -->
+<button (click)="abrirModal()">Añadir personaje</button>
+<div class="modal-fondo" *ngIf="modalAbierto">
+  <div class="modal-contenido">
+    <app-nuevo-personaje (nuevo)="cerrarModal()"></app-nuevo-personaje>
+    <button (click)="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
+<div class="pokedex-container">
+  <div class="pokemon-list">
+    <div class="pokemon-card" *ngFor="let p of personajes">
+
+      <h3>{{ p.nombre }}</h3>
+      <p>Tipo:  {{ p.tipo }}</p>
+      <p>Poder: {{p.poder}}</p>
+      <p>Mundo: {{p.mundo}}</p>
+
+      <button (click)="eliminarPokemon(p.id)">
+        Eliminar ❌
+      </button>
+
+    </div>
+     <p *ngIf="personajes.length === 0">
+      No hay personajes todavía 🍄
+    </p>
+  </div>
+</div>
+
+
+

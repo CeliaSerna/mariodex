@@ -1,0 +1,24 @@
+# --- LARAVEL (Backend) ---
+/backend/vendor/
+/backend/.env
+/backend/storage/*.key
+/backend/storage/framework/cache/*
+/backend/storage/framework/sessions/*
+/backend/storage/framework/views/*
+/backend/node_modules/
+/backend/public/storage
+/backend/.phpunit.result.cache
+
+# --- ANGULAR (Frontend) ---
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/
+/frontend/.vscode/
+/frontend/coverage/
+/frontend/.pnpm-debug.log*
+
+# --- SISTEMA Y OTROS ---
+.DS_Store
+.idea/
+.vscode/
+*.log

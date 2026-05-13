@@ -1,0 +1,52 @@
+h1{
+    font-size: 50px;
+    color: blue;
+    margin-left: 20px;
+    text-shadow: 2px 2px yellow;
+}
+h2 {
+    font-family: monospace;
+    font-size: 25px;
+    color: green;
+    margin-left: 20px;
+    padding-bottom: 20px;
+    /*text-shadow: 1px 1px blue;*/
+    font-style: italic;
+}
+button{
+   background-color: yellow;
+   font-size: 20px;
+   border-radius: 6px;
+   color: blue;
+}
+.pokedex-container{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.pokemon-list{
+    margin-bottom: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+        }
+.pokemon-card{
+    width: 280px;
+    height: 300px;
+    background-color: #cce3f5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    font-family: monospace;
+    font-size: 30px;
+    color: #41A532;
+    text-shadow: yellow 1px 1px;
+}
