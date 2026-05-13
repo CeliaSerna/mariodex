@@ -14,7 +14,7 @@ export interface Mario {
   providedIn: 'root'
 })
 export class MarioService {
-  private url = 'http://localhost:8000/personajes'; // la ruta de laravel
+  private url = 'https://mariodex-backend-sgxu.onrender.com/personajes'; // la ruta de laravel
   // Estado reactivo con BehaviorSubject
   private pokemonsSubject = new BehaviorSubject<Mario[]>([]);
 
@@ -25,7 +25,7 @@ export class MarioService {
 
   // Obtener valor actual
   getPokemons() {
-    this.http.get<Mario[]>('http://localhost:8000/personajes').subscribe({
+    this.http.get<Mario[]>('https://mariodex-backend-sgxu.onrender.com/personajes').subscribe({
       next: (res) => {
         // Metemos los datos recibidos en el BehaviorSubject
         console.log('Servicio: He recibido esto de Laravel:', res);
@@ -37,7 +37,7 @@ export class MarioService {
 
   // Añadir 
   addPokemon(nuevoMario: Mario) {
-    return this.http.post<Mario>('http://localhost:8000/personajes', nuevoMario).subscribe({
+    return this.http.post<Mario>('https://mariodex-backend-sgxu.onrender.com/personajes', nuevoMario).subscribe({
       next: (personajeGuardado) => {
         // la lista se actualice sola
         const listaActual = this.pokemonsSubject.getValue();
@@ -50,7 +50,7 @@ export class MarioService {
 
   // Eliminar 
   removePokemon(id: number) {
-    return this.http.delete(`http://localhost:8000/personajes/${id}`).subscribe({
+    return this.http.delete(`https://mariodex-backend-sgxu.onrender.com/personajes/${id}`).subscribe({
       next: () => {
         // Filtramos la lista actual para quitar el que acabamos de borrar
         const listaActual = this.pokemonsSubject.getValue();
