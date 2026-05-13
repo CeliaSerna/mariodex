@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:4200'],
+    'allowed_origins' => ['http://localhost:4200','https://mariodex-brj4.onrender.com'],
 
     'allowed_origins_patterns' => [],
 
