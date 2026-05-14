@@ -1,11 +1,18 @@
-<h1>MarioDex</h1>
-<h2>Enciclopedia coleccionable del universo Mario Bros.</h2>
+<header class="main-header">
+  <div class="header-dex">
+    <img src="assets/mario.png" alt="Mario" class="logo-pequeno">
+    <h1>MarioDex</h1>
+  </div>
+  <h2>Enciclopedia coleccionable del universo Mario Bros.</h2>
+</header>
 
 <!-- Modal -->
-<button (click)="abrirModal()">Añadir personaje</button>
+<button (click)="abrirModal()" class="btn-abrir">
+  Añadir Personaje
+</button>
 <div class="modal-fondo" *ngIf="modalAbierto">
   <div class="modal-contenido">
-    <app-nuevo-personaje (nuevo)="cerrarModal()"></app-nuevo-personaje>
+    <app-nuevo-personaje></app-nuevo-personaje>
     <button (click)="cerrarModal()">Cerrar</button>
   </div>
 </div>

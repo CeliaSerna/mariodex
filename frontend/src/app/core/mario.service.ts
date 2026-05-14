@@ -26,10 +26,10 @@ export class MarioService {
   // Obtener valor actual
   getPokemons() {
     this.http.get<Mario[]>('https://mariodex-backend-sgxu.onrender.com/personajes').subscribe({
-      next: (res) => {
+      next: (data) => {
         // Metemos los datos recibidos en el BehaviorSubject
-        console.log('Servicio: He recibido esto de Laravel:', res);
-        this.pokemonsSubject.next(res);
+        console.log('Servicio: He recibido esto de Laravel:', data);
+        this.pokemonsSubject.next(data);
       },
       error: (err) => console.error('Error al obtener personajes:', err)
     });

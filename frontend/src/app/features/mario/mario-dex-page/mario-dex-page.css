@@ -1,3 +1,22 @@
+/* Contenedor que envuelve TODO el encabezado */
+.main-header {
+  text-align: center; /* Centra el h2 y el bloque del logo */
+  margin-bottom: 30px;
+}
+/* El bloque que junta la foto y el h1 */
+.header-dex {
+  display: flex;
+  align-items: center;    /* Centra la foto verticalmente con el texto */
+  justify-content: center; /* Los centra horizontalmente */
+  gap: 10px;              /* Espacio pequeño entre la foto y el nombre */
+}
+.logo-pequeno {
+  width: 50px;  
+  height: auto;
+}
+.btn-abrir{
+    margin-left: 30px;
+}
 h1{
     font-size: 50px;
     color: blue;
